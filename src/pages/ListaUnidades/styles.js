@@ -1,5 +1,32 @@
 import styled from 'styled-components';
 
+export const ButtonNovaUnidade = styled.button`
+    display: flex;
+    align-items: center;
+    flex-direction: row;    
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;    
+    text-shadow:none;
+    font-weight: bold;
+    font-size: 16px;  
+    margin: 5px; 
+    margin-left: 70%;     
+    width: 15%;
+    height: 55px; 
+    padding-left: 4%;   
+    &:hover{
+      background: #4C5DF1; 
+        a{
+            color:white;   
+                 
+        }        
+    }
+    a{
+        color:grey;
+        text-decoration: none
+    } 
+`;
 export const TelaDiv = styled.div`
     display: flex;       
     background-color: lightblue;
@@ -20,8 +47,7 @@ export const MenuDiv = styled.div`
 export const UnidadeDiv = styled.div`
     width: 85%;  
     background-color: white;               
-    font-size: 30px;    
-    color: green;     
+    font-size: 30px;          
     vertical-align: middle; 
     height:100%;
 `;
@@ -29,7 +55,9 @@ export const UnidadeDiv = styled.div`
 export const Title = styled.div`
     background-color: yellow;
     color: black;
-    height: 8%;       
+    height: 8%;  
+    padding-left: 2%; 
+    font-weight: bold;    
 `;
 
 export const SubTitle = styled.div`    
@@ -37,7 +65,7 @@ export const SubTitle = styled.div`
     color: black;
     background-color: green;
     width: 30%;
-    margin-left: 30px;        
+    margin-left: 5%;          
 `;
 
 export const Tablelist = styled.div`
@@ -46,10 +74,11 @@ export const Tablelist = styled.div`
     height: 60%;
     width: 80%;
     margin-left: 5%;
+    color: black;    
 `;
 
 export const ButtonNew = styled.div`
-    background-color: blue; 
+    background-color: white; 
     text-align: right;
 `;
 

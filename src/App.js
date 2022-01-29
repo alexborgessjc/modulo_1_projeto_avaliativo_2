@@ -19,7 +19,7 @@ function App() {
           <Route path="/cadastrodeunidade" element={<CadastroDeUnidade/>} />
           <Route path="/lancamentodegeracao" element={<LancamentoDeGeracao/>} />    
           <Route path="/novaunidade" element={<NovaUnidade/>} />  
-          <Route path="/editar" element={<EditarUnidade/>} />     
+          <Route path="/editar/:id" element={<EditarUnidade/>} />     
         </Routes>                 
     </>
   );

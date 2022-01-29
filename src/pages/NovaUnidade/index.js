@@ -1,13 +1,15 @@
 
 import Menu from '../../components/Menu';
 import {toast} from 'react-toastify';
-
 import React,{ useState } from 'react';
-import {Form, ListaUnidadeDiv, TelaDiv, MenuDiv, Title, SubTitle, Tablelist, ButtonNew, Background} from './styles';
+import {Form, InputCheck, Input, InputDiv, ListaUnidadeDiv, TelaDiv, MenuDiv, Title, SubTitle, Tablelist, DivButtonNew, ButtonNew, Background} from './styles';
 
 function ListaUnidades() { 
     const [apelido, setApelido] = useState('')
     const [local, setLocal] = useState('')
+    const [marca, setMarca] = useState('')
+    const [modelo, setModelo] = useState('')
+    const [ativo, setAtivo] = useState('')
     
     async function handleSubmit(unidade) {        
         unidade.preventDefault();
@@ -18,7 +20,10 @@ function ListaUnidades() {
                     method: 'POST',
                     body: JSON.stringify({
                         apelido: apelido,
-                        local: local                      
+                        local: local,
+                        marca: marca,
+                        modelo: modelo,
+                        ativo: ativo                      
                     }),
                     headers: { 'Content-Type': 'application/json' },
                     },
@@ -36,24 +41,46 @@ function ListaUnidades() {
             </MenuDiv>            
             <ListaUnidadeDiv>                
                 <Title>Unidades</Title>
-                <Background>
-                    <SubTitle>Cadastro de Unidade Geradora</SubTitle>
+                <Background>                    
                     <Form onSubmit={handleSubmit}>
                         <Tablelist>
-                            Apelido
-                            <input type="text"                                
-                                value={apelido}
-                                onChange={(unidade) => setApelido(unidade.target.value)}
-                            /><br/> 
-                            Local
-                            <input type="text"                                
-                                value={local}
-                                onChange={(unidade) => setLocal(unidade.target.value)}
-                            />                                                                                                                                                                         
+                            <SubTitle>Cadastro de Unidade Geradora</SubTitle>
+                            <InputDiv>
+                                Apelido<br/>
+                                <Input type="text"                                
+                                    value={apelido}                                
+                                    onChange={(unidade) => setApelido(unidade.target.value)}
+                                /><br/>
+                            </InputDiv>    
+                            <InputDiv>
+                                Local<br/>
+                                <Input type="text"                                
+                                    value={local}
+                                    onChange={(unidade) => setLocal(unidade.target.value)}
+                                /><br/> 
+                            </InputDiv>  
+                            <InputDiv>
+                                Marca<br/>
+                                <Input type="text"                                
+                                    value={marca}
+                                    onChange={(unidade) => setMarca(unidade.target.value)}
+                                /><br/>
+                            </InputDiv>  
+                            <InputDiv>
+                                Modelo<br/>
+                                <Input type="text"                                
+                                    value={modelo}
+                                    onChange={(unidade) => setModelo(unidade.target.value)}
+                                /><br/>
+                            </InputDiv>                                                         
+                            <InputCheck name="isTrue" type="checkbox"                                
+                                checked={ativo}
+                                onChange={(unidade) => setAtivo(unidade.target.checked)}
+                            />Ativo                                                                                                                                                               
                         </Tablelist>  
-                        <ButtonNew>                              
-                                <button type="submit">Salvar</button>                            
-                        </ButtonNew>
+                        <DivButtonNew>                              
+                                <ButtonNew type="submit">Salvar</ButtonNew>                            
+                        </DivButtonNew>
                     </Form>
                 </Background>                
             </ListaUnidadeDiv>              

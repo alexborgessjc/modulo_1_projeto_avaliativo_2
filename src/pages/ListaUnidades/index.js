@@ -4,7 +4,7 @@ import Unidades from '../../components/Unidades';
 import { Link } from "react-router-dom";
 
 import React from 'react';
-import { UnidadeDiv,TelaDiv,MenuDiv,Title,SubTitle,Tablelist,ButtonNew,Background} from './styles';
+import { ButtonNovaUnidade, UnidadeDiv,TelaDiv,MenuDiv,Title,SubTitle,Tablelist,ButtonNew,Background} from './styles';
 
 function ListaUnidades() {         
     return (        
@@ -17,15 +17,12 @@ function ListaUnidades() {
                 <Background>
                     <SubTitle>Lista de unidades</SubTitle>
                     <Tablelist>
-                        Tabela  
-                        
-                            <Unidades/>               
-                                                                                                                                                                           
+                        <table>                                                 
+                            <Unidades/>  
+                        </table>                                                                                                                                                                   
                     </Tablelist>  
-                    <ButtonNew>                    
-                        <Link to="/novaunidade">
-                            <button>Nova unidade</button>
-                        </Link>
+                    <ButtonNew>                         
+                            <ButtonNovaUnidade><Link to="/novaunidade">Nova unidade</Link></ButtonNovaUnidade>                                                                     
                     </ButtonNew>
                 </Background>                
             </UnidadeDiv>              

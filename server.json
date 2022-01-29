@@ -1,47 +1,20 @@
 {
   "unidades": [
     {
-      "id": 123,
-      "apelido": "AA",
-      "local": "SJC - SP",
-      "marca": "Marca A",
-      "modelo": "Modelo A",
-      "status": true,
-      "geracao_mensal": [
-        {
-          "janeiro": 10,
-          "fevereiro": 10,
-          "marco": 10,
-          "abril": 10,
-          "maio": 10,
-          "junho": 10,
-          "julho": 10
-        }
-      ]
+      "apelido": "Teste5",
+      "local": "Teste6",
+      "marca": "Teste7",
+      "modelo": "Teste8",
+      "ativo": true,
+      "id": 124
     },
     {
-      "id": 456,
-      "apelido": "AB",
-      "local": "Jacareí - SP",
-      "marca": "Marca B",
-      "modelo": "Modelo B",
-      "status": false,
-      "geracao_mensal": [
-        {
-          "janeiro": 10,
-          "fevereiro": 10,
-          "marco": 10,
-          "abril": 10,
-          "maio": 10,
-          "junho": 10,
-          "julho": 10
-        }
-      ]
-    },
-    {
-      "apelido": "teste2",
-      "local": "teste2",
-      "id": 457
+      "apelido": "Teste11",
+      "local": "Teste22",
+      "marca": "Teste33",
+      "modelo": "Teste44",
+      "ativo": false,
+      "id": 125
     }
   ],
   "user": {

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
+import { ButtonRemover, ButtonEditar,Thead } from './styles';
 
 function Unidades() {   
   const [unidade, setUnidade] = useState([]);
@@ -32,31 +33,41 @@ function Unidades() {
   }
   
   return (
-    <div className="item-unidade">  
+    <>  
+      <Thead>
+        <tr>
+          <th>ID</th>
+          <th>Apelido</th>
+          <th>Local</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Editar</th>
+          <th>Remover</th>          
+        </tr>        
+      </Thead>          
       {
         unidade.map((unidade) =>{
-          return(
-            <div key={unidade.id}>
-              <div className="id">{unidade.id}</div>      
-              <div className="btn">        
-                <button onClick={() => removeUnidade(unidade.id)}>Remover</button>
-                <Link to="/editar">
-                <button>
-                  Editar
-                </button>
-                </Link>
-              </div>
-            </div>
+          return(   
+            <tbody key={unidade.id}>         
+              <tr >              
+                <td>{unidade.id}</td>    
+                <td>{unidade.apelido}</td> 
+                <td>{unidade.local}</td>    
+                <td>{unidade.marca}</td>  
+                <td>{unidade.modelo}</td> 
+                <td>
+                  <ButtonEditar><Link to={"/editar/"+unidade.id}>Editar</Link></ButtonEditar>
+                </td> 
+                <td>        
+                  <ButtonRemover onClick={() => removeUnidade(unidade.id)}>Remover</ButtonRemover>                 
+                </td>                                
+              </tr>  
+            </tbody>                    
           )
-        }
-        
-        
-
-        )
-        
-      }            
-      
-    </div>
+        } 
+      )       
+      }      
+    </>
   );
 }
 

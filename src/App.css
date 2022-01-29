@@ -63,14 +63,15 @@
   }
   
   .table-cart thead, th {
-    color: #999;
+    color: black;
     text-align: left;
-    padding: 12px;
+    padding: 12px;    
   }
   
   .table-cart tbody, th {
     padding: 12px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid grey;
+    background-color: #D3D3D3;
   }
   
   .table-image {

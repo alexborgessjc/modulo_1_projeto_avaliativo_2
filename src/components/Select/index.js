@@ -3,18 +3,16 @@ import { List } from './styles';
 
 function Select({options, description, ...otherProps }) {
   
-  return (
-       
+  return (      
       <List {...otherProps} selected="">
         <option disabled value="">{description}</option>
         {options.map(option => <option
           key={option.id}
-          value={option.value}>
+          value={option.id}>
           {option.apelido}
         </option>
         )}
-      </List>
-    
+      </List>   
   );
 }
 

@@ -57,20 +57,19 @@ function LancamentoDeGeracao() {
                         <Tablelist>
                             <SubTitle>Cadastro de Unidade Geradora</SubTitle>
                             <InputDiv>
-                                Unidade geradora<br/>
+                                Unidade geradora<br/>                                
                                 <Select
                                     label="Unidade geradora:"
-                                    value={unidade.id}                                    
+                                                                       
                                     options={unidade}
                                     description="Selecione uma unidade"
-                                    //onChange={(gerado) => setUnidade(gerado.target.value)}
+                                    onChange={(gerado) => setId(gerado.target.value)}
                                 />
                                 <br/>
                             </InputDiv> 
                             <InputDiv>
-                                Mês/ano<br/> 
-                                <h1>Selected Date: {date}</h1>
-                                <input type="date"
+                                Mês/ano<br/>                                 
+                                <input type="month"
                                     onChange={(gerado) => setDate(gerado.target.value)}
                                 />
                             </InputDiv>                                                                   

@@ -16,7 +16,17 @@ function Unidades() {
 }, []);  
 
   function removeUnidade(idUnidade) {              
-    axios.delete(`http://localhost:3333/unidades/${idUnidade}`)    
+    axios.delete(`http://localhost:3333/unidades/${idUnidade}`).then(async()=>{
+      const resp = await axios.get(
+        `http://localhost:3333/geracao?id=${idUnidade}`
+      );
+      resp.data.forEach(
+        async(receivedData) =>
+          await axios.delete(
+            `http://localhost:3333/geracao/${receivedData.id}`    
+        )
+      );
+    });   
     removeFromTable(idUnidade);
     alert("Unidade: "+idUnidade+" Removida!")
   }

@@ -15,11 +15,56 @@
       "modelo": "Teste44",
       "ativo": false,
       "id": 125
+    },
+    {
+      "apelido": "RR",
+      "local": "EE",
+      "marca": "AA",
+      "modelo": "SS",
+      "ativo": true,
+      "id": 126
     }
   ],
   "user": {
     "id": 123,
     "email": "admin",
     "password": 123
-  }
+  },
+  "geracao": [
+    {
+      "id": "",
+      "data": "",
+      "gerado": "59"
+    },
+    {
+      "id": "VIIhx8x",
+      "data": "",
+      "gerado": "89"
+    },
+    {
+      "id": "OVZ55md",
+      "data": "",
+      "gerado": "88"
+    },
+    {
+      "id": "4hTbAjJ",
+      "data": "",
+      "gerado": "78"
+    },
+    {
+      "id": "gw_gGKZ",
+      "data": "",
+      "gerado": "99"
+    },
+    {
+      "id": "8liQfd7",
+      "data": "",
+      "gerado": "99"
+    },
+    {
+      "id": "8dhlE0O",
+      "data": "2022-01-06",
+      "gerado": "77"
+    }
+  ]
 }

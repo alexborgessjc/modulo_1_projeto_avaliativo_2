@@ -96,9 +96,9 @@ export const ButtonNew = styled.button`
     text-shadow:none;
     font-weight: bold;
     font-size: 16px;        
-    width: 10%;
+    width: 160px;
     height: 55px; 
-    padding-left: 3%;   
+    padding-left: 40px;   
     cursor: pointer;
         
 `;

@@ -4,8 +4,8 @@ import { List } from './styles';
 function Select({options, description, ...otherProps }) {
   
   return (      
-      <List {...otherProps} selected="">
-        <option disabled value="">{description}</option>
+      <List {...otherProps} defaultValue={'DEFAULT'}>
+        <option disabled value='DEFAULT' >{description}</option>
         {options.map(option => <option
           key={option.id}
           value={option.id}>

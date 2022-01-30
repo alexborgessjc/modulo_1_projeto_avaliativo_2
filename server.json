@@ -30,11 +30,21 @@
     "email": "admin",
     "password": 123
   },
-  "geracao": [    
+  "geracao": [
+    {
+      "id": "124",
+      "data": "2022-02",
+      "gerado": "80"
+    },
+    {
+      "id": "125",
+      "data": "2022-02",
+      "gerado": "81"
+    },
     {
       "id": "126",
-      "data": "2022-03",
-      "gerado": "74"
+      "data": "2022-02",
+      "gerado": "82"
     }
   ]
 }

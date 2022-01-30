@@ -8,7 +8,7 @@ export const Input = styled.input`
 `;
 
 export const InputDiv = styled.div`
-  margin: 10px;
+  margin: 40px;  
 `;
 
 export const InputCheck = styled.input`    
@@ -62,20 +62,7 @@ export const Title = styled.div`
     height: 8%; 
     padding-left: 25px;   
     font-family: Sans-serif;   
-    margin-top: 20px;
-`;
-
-export const SubTitle = styled.div`    
-    text-align: center;
-    color: black;
-    background-color: white;
-    width: 30%;
-    margin-left: 0px;
-    margin-bottom: 25px;
-    margin-top: 50px;
-    font-weight: bold;  
-    font-family: Sans-serif; 
-    font-size: 25px;  
+    margin-top: 40px;
 `;
 
 export const Tablelist = styled.div`

@@ -1,5 +1,7 @@
 import Menu from '../../components/Menu';
-import { DashboardDiv,TelaDiv,MenuDiv} from './styles';
+import Painel from '../../components/Painel';
+import React from 'react';
+import { DashboardDiv,TelaDiv,MenuDiv,Title, PainelFundo,Tablelist, Background} from './styles';
 
 function Dashboard() {
     return (
@@ -7,8 +9,16 @@ function Dashboard() {
             <MenuDiv>
                 <Menu></Menu>
             </MenuDiv>            
-            <DashboardDiv>
-                Dashboard
+            <DashboardDiv>                
+                <Title>Dashboard</Title>
+                <Background>
+                    <PainelFundo>
+                        <Painel/> 
+                    </PainelFundo>
+                    <Tablelist>
+                        Gráfico                                                                                                                                                                    
+                    </Tablelist>                    
+                </Background>                
             </DashboardDiv>              
         </TelaDiv>
     );

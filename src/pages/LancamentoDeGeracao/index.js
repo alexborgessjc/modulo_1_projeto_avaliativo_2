@@ -3,7 +3,7 @@ import Menu from '../../components/Menu';
 import {toast} from 'react-toastify';
 import axios from "axios";
 import React,{ useState, useEffect } from 'react';
-import {Form, Input, InputDiv, ListaUnidadeDiv, TelaDiv, MenuDiv, Title, SubTitle, Tablelist, DivButtonNew, ButtonNew, Background} from './styles';
+import {Form, Input, InputDiv, ListaUnidadeDiv, TelaDiv, MenuDiv, Title, Tablelist, DivButtonNew, ButtonNew, Background} from './styles';
 
 function LancamentoDeGeracao() {    
     const [id, setId] = useState('')    
@@ -51,16 +51,14 @@ function LancamentoDeGeracao() {
                 <Menu></Menu>
             </MenuDiv>            
             <ListaUnidadeDiv>                                
-                <Title>Unidades</Title>
+                <Title>Lançamento de geração mensal</Title>
                 <Background>                    
                     <Form onSubmit={handleSubmit}>
-                        <Tablelist>
-                            <SubTitle>Cadastro de Unidade Geradora</SubTitle>
+                        <Tablelist>                            
                             <InputDiv>
-                                Unidade geradora<br/>                                
+                                Unidade geradora:<br/>                                
                                 <Select
-                                    label="Unidade geradora:"
-                                                                       
+                                    label="Unidade geradora:"                                                                       
                                     options={unidade}
                                     description="Selecione uma unidade"
                                     onChange={(gerado) => setId(gerado.target.value)}

@@ -53,7 +53,7 @@ export const UnidadeDiv = styled.div`
 `;
 
 export const Title = styled.div`
-    background-color: yellow;
+    background-color: white;
     color: black;
     height: 8%;  
     padding-left: 2%; 
@@ -63,18 +63,25 @@ export const Title = styled.div`
 export const SubTitle = styled.div`    
     text-align: center;
     color: black;
-    background-color: green;
+    background-color: #FFFAFA;
     width: 30%;
-    margin-left: 5%;          
+    margin-left: 5%;   
+    padding-top: 70px;   
+    font-weight: bold;    
 `;
 
 export const Tablelist = styled.div`
-    background-color: pink; 
+    background-color: white; 
     text-align: center;   
     height: 60%;
-    width: 80%;
+    width: 90%;
     margin-left: 5%;
-    color: black;    
+    color: black; 
+    margin-top: 30px;       
+`;
+
+export const Tabela = styled.table`    
+    width: 100%;    
 `;
 
 export const ButtonNew = styled.div`
@@ -83,7 +90,7 @@ export const ButtonNew = styled.div`
 `;
 
 export const Background = styled.div`
-    background-color: purple;
+    background-color: #FFFAFA;
     width: 100%;
     height:90%;    
 `;
@@ -94,7 +101,7 @@ export const Table = styled.table`
   background: #FFF;
   padding: 10px;
   border-radius: 10px;
-  margin: 10px 0;
+  margin: 10px 0;  
 `;
 
 export const THeader = styled.thead`

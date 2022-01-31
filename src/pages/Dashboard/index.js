@@ -1,4 +1,5 @@
 import Menu from '../../components/Menu';
+import Grafico from '../../components/Grafico';
 import Painel from '../../components/Painel';
 import React from 'react';
 import { DashboardDiv,TelaDiv,MenuDiv,Title, PainelFundo,Tablelist, Background} from './styles';
@@ -16,7 +17,7 @@ function Dashboard() {
                         <Painel/> 
                     </PainelFundo>
                     <Tablelist>
-                        Gráfico                                                                                                                                                                    
+                        <Grafico/>                                                                                                                                                                    
                     </Tablelist>                    
                 </Background>                
             </DashboardDiv>              

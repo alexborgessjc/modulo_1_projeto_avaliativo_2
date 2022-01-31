@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import { ButtonRemover, ButtonEditar,Thead } from './styles';
+import { TR, ButtonRemover, ButtonEditar,Thead } from './styles';
 
 function Unidades() {   
   const [unidade, setUnidade] = useState([]);
@@ -45,15 +45,15 @@ function Unidades() {
   return (
     <>  
       <Thead>
-        <tr>
+        <TR>
           <th>ID</th>
           <th>Apelido</th>
           <th>Local</th>
           <th>Marca</th>
           <th>Modelo</th>
-          <th>Editar</th>
-          <th>Remover</th>          
-        </tr>        
+          <th></th>
+          <th></th>          
+        </TR>        
       </Thead>          
       {
         unidade.map((unidade) =>{

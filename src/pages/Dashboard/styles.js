@@ -53,7 +53,7 @@ export const DashboardDiv = styled.div`
 `;
 
 export const Title = styled.div`
-    background-color: yellow;
+    background-color: white;
     color: black;
     height: 8%;  
     padding-left: 2%; 
@@ -64,19 +64,22 @@ export const Title = styled.div`
 export const PainelFundo = styled.div`    
     text-align: center;
     color: black;
-    background-color: green;
+    background-color: #FFFAFA;
     width: 80%;
-    margin-left: 5%;      
+    margin-left: 5%;   
+    padding-top: 20px;   
     display: flex;     
 `;
 
 export const Tablelist = styled.div`
-    background-color: pink; 
+    background-color: white; 
     text-align: center;   
     height: 60%;
     width: 80%;
     margin-left: 5%;
     color: black;    
+    margin-top: 30px;
+    padding-top: 30px;
 `;
 
 export const ButtonNew = styled.div`
@@ -85,7 +88,7 @@ export const ButtonNew = styled.div`
 `;
 
 export const Background = styled.div`
-    background-color: purple;
+    background-color: #FFFAFA;
     width: 100%;
     height:90%;    
 `;
@@ -106,21 +109,6 @@ export const THeader = styled.thead`
   text-align: left;
   padding: 12px;
   }
-`;
-
-export const TBody = styled.tbody`
-`;
-
-export const Row = styled.tr`
-`;
-
-export const RowItem = styled.td`
-  padding: 12px;
-  border-bottom: 1px solid #EC6D08;
-`;
-
-export const CartPhoto = styled.img`
-  height: 100px;
 `;
 
 export const Button = styled.button`

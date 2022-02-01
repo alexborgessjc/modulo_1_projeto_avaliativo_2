@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React,{useEffect,useState} from 'react'
+import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -23,6 +23,33 @@ export default function Chart({ labels, dataPlot}){
     Tooltip,
     Legend
   );
+
+  const [geracao, setGeracao] = useState([]);
+
+  useEffect(() => {
+    async function getGeracao() {
+      axios
+        .get(`http://localhost:3333/geracao`)
+        .then((resp) => setGeracao(resp.data))        
+    }
+    getGeracao();        
+  }, []); 
+   
+  const obj = 
+  geracao.map((geracao) =>{
+    return(
+      { 
+        label: geracao.id,
+        data: [geracao.gerado,20,30], //tratar o dado
+        borderColor: '#2196f3',
+        backgroundColor: '#2196f3',
+      }
+    )
+    
+    }
+  )
+  
+  const obj2 = JSON.parse(JSON.stringify(obj));  
 
   const options = {
     responsive: true,
@@ -48,14 +75,8 @@ export default function Chart({ labels, dataPlot}){
 
 const data = {
   labels:['Janeiro', 'Fevereiro','Março', 'Abril', 'Maio', 'Junho'],
-  datasets:[
-    {
-      label: 'Geração',
-      data: [10,20,30], //tratar o dado
-      borderColor: '#2196f3',
-      backgroundColor: '#2196f3',
-    },
-  ],
-};
+  datasets:obj2,
+};  
+
   return <Line options={options} data={data}/>;
 }

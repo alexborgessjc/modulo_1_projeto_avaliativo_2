@@ -27,14 +27,14 @@ function LancamentoDeGeracao() {
         gerado.preventDefault();       
            
         //JSON.parse(JSON.stringify(userData))
-        const a = JSON.parse(JSON.stringify([
+        const a = JSON.parse(JSON.stringify(
             {
-                id: id,
+                idUnidade: id,
                 data: date,
                 gerado: valorgerado
             }
 
-        ]))
+        ))
         
         axios.post('http://localhost:3333/geracao', a)        
     }

@@ -1,6 +1,5 @@
 import Select from '../../components/Select';
 import Menu from '../../components/Menu';
-import {toast} from 'react-toastify';
 import axios from "axios";
 import React,{ useState, useEffect } from 'react';
 import {Form, Input, InputDiv, ListaUnidadeDiv, TelaDiv, MenuDiv, Title, Tablelist, DivButtonNew, ButtonNew, Background} from './styles';

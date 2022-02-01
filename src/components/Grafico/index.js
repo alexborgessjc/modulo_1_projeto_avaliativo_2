@@ -25,6 +25,7 @@ export default function Chart({ labels, dataPlot}){
   );
 
   const [geracao, setGeracao] = useState([]);
+  const [unidade, setUnidade] = useState([]);
 
   useEffect(() => {
     async function getGeracao() {
@@ -33,24 +34,17 @@ export default function Chart({ labels, dataPlot}){
         .then((resp) => setGeracao(resp.data))        
     }
     getGeracao();        
-  }, []); 
-   
-  const obj = 
-  geracao.map((geracao) =>{
-    return(
-      { 
-        label: geracao.id,
-        data: [geracao.gerado,20,30], //tratar o dado
-        borderColor: '#2196f3',
-        backgroundColor: '#2196f3',
-      }
-    )
-    
-    }
-  )
+  }, []);  
   
-  const obj2 = JSON.parse(JSON.stringify(obj));  
-
+  useEffect(() => {
+    async function getUnidade() {
+      axios
+        .get(`http://localhost:3333/unidades`)
+        .then((resp) => setUnidade(resp.data))        
+    }
+    getUnidade();        
+  }, []); 
+  
   const options = {
     responsive: true,
     scales: {
@@ -73,10 +67,29 @@ export default function Chart({ labels, dataPlot}){
     },
 };
 
+const obj = 
+  unidade.map((unidade) =>{
+    const geracao2 = 
+      geracao.filter((value) => value.idUnidade === unidade.id)  
+                  
+  console.log(geracao2);  
+    return(
+      
+      { 
+        
+        label: unidade.apelido,
+        data: [10,20,30], //tratar o dado
+        borderColor: '#2196f3',
+        backgroundColor: '#2196f3',
+      }
+    )}
+  )
+  
+  const obj2 = JSON.parse(JSON.stringify(obj)); 
+
 const data = {
   labels:['Janeiro', 'Fevereiro','Março', 'Abril', 'Maio', 'Junho'],
-  datasets:obj2,
-};  
+  datasets:obj2};  
 
   return <Line options={options} data={data}/>;
 }

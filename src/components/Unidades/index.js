@@ -18,7 +18,7 @@ function Unidades() {
   function removeUnidade(idUnidade) {              
     axios.delete(`http://localhost:3333/unidades/${idUnidade}`).then(async()=>{
       const resp = await axios.get(
-        `http://localhost:3333/geracao?id=${idUnidade}`
+        `http://localhost:3333/geracao?idUnidade=${idUnidade}`
       );
       resp.data.forEach(
         async(receivedData) =>

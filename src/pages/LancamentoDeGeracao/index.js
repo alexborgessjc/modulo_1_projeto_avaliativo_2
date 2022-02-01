@@ -24,27 +24,21 @@ function LancamentoDeGeracao() {
     
     //Enviando a geração
     async function handleSubmit(gerado) {        
-        gerado.preventDefault();
-                         
-        try {            
-            await fetch('http://localhost:3333/geracao',
-                {                    
-                    method: 'POST',
-                    body: JSON.stringify({
-                        id: id,
-                        data: date,
-                        gerado: valorgerado
+        gerado.preventDefault();       
+           
+        //JSON.parse(JSON.stringify(userData))
+        const a = JSON.parse(JSON.stringify([
+            {
+                id: id,
+                data: date,
+                gerado: valorgerado
+            }
 
-                    }),
-                    headers: { 'Content-Type': 'application/json' },
-                    },
-                )
-                toast.success('Lançado com sucesso')
-            } catch (error) {
-            toast.error('Deu ruim')
-        }        
-    }    
-    
+        ]))
+        
+        axios.post('http://localhost:3333/geracao', a)        
+    }
+      
     return (
         <TelaDiv>
             <MenuDiv>

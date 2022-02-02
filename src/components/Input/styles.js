@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import '../../assets/css/fonts.css'
 
-export const ContainerInput = styled.div`
+export const ContainerInput = styled.div`  
   display: flex;
   flex-direction: column;
   flex-basis: ${props => props.flexBasis};  
@@ -9,27 +10,33 @@ export const ContainerInput = styled.div`
   height: 50px;
   margin-left: auto;
   margin-right: auto;  
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 15px;
   svg{
     padding-left: 2%;   
-    color: grey;    
+    color: #A098AE;    
     position: relative;
     top: 20px; 
     width: 50px;
     height: 50px;
-
   }   
 `;
 
-export const InputText = styled.input`    
+export const InputText = styled.input`  
   margin-left: auto;
   margin-right: auto;
   width: 47%;
-  height: 50px;
+  height: 30px;
   border-radius: 5px;
   outline: none;  
-  padding-left: 0px;    
+  padding-bottom: 5px;
+  padding-left: 0px;  
+  ::-webkit-input-placeholder 
+  {    
+    color: #A098AE;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;    
+  }  
 `;
 
 export const ErrorMessage = styled.div`

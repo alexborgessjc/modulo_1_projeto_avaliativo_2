@@ -14,13 +14,13 @@ function Input({label, errorMessage, flexBasis, ...otherProps }) {
   if(icone ==="E-mail"){
     return (  
       <>
-      <ContainerInput flexBasis={flexBasis}>              
-        <AiFillMail size="20px" />     
-        <InputText 
-          {...otherProps}        
-        />         
-      </ContainerInput>
-      <ErrorMessage>{errorMessage}</ErrorMessage> 
+        <ContainerInput flexBasis={flexBasis}>              
+          <AiFillMail size="20px" />     
+          <InputText 
+            {...otherProps}        
+          />         
+        </ContainerInput>
+        <ErrorMessage>{errorMessage}</ErrorMessage> 
       </>        
     );
   }

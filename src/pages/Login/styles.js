@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import '../../assets/css/fonts.css'
 
 export const FormDefault = styled.form`
   display: flex;
@@ -68,7 +69,7 @@ export const FormDiv = styled.div`
 
 export const TitleLogin = styled.div`
   margin-bottom: 40px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', serif;
   color: #696969;
   font-weight: bold;
 `;

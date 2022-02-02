@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import '../../assets/css/fonts.css';
 
 export const ButtonNovaUnidade = styled.button`
+    font-family: Poppins;
     display: flex;
     align-items: center;
     flex-direction: row;    
@@ -18,8 +20,7 @@ export const ButtonNovaUnidade = styled.button`
     &:hover{
       background: #4C5DF1; 
         a{
-            color:white;   
-                 
+            color:white;                    
         }        
     }
     a{
@@ -57,7 +58,11 @@ export const Title = styled.div`
     color: black;
     height: 8%;  
     padding-left: 2%; 
-    font-weight: bold;    
+    font-weight: bold;  
+    margin-top: 33px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;  
 `;
 
 export const SubTitle = styled.div`    
@@ -68,6 +73,7 @@ export const SubTitle = styled.div`
     margin-left: 5%;   
     padding-top: 70px;   
     font-weight: bold;    
+    font-family: Poppins;
 `;
 
 export const Tablelist = styled.div`

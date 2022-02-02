@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import '../../assets/css/fonts.css'
 
 export const Input = styled.input`
   border-radius: 5px;
@@ -9,6 +10,9 @@ export const Input = styled.input`
 
 export const InputDiv = styled.div`
   margin: 40px;  
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: bold;
 `;
 
 export const InputCheck = styled.input`    
@@ -61,7 +65,7 @@ export const Title = styled.div`
     color: black;
     height: 8%; 
     padding-left: 25px;   
-    font-family: Sans-serif;   
+    font-family: 'Poppins', sans-serif;  
     margin-top: 40px;
 `;
 
@@ -94,13 +98,13 @@ export const ButtonNew = styled.button`
     border: none;
     border-radius: 15px;    
     text-shadow:none;
+    font-family: Poppins;
     font-weight: bold;
     font-size: 16px;        
     width: 160px;
     height: 55px; 
     padding-left: 40px;   
-    cursor: pointer;
-        
+    cursor: pointer;        
 `;
 
 export const Background = styled.div`
@@ -108,7 +112,6 @@ export const Background = styled.div`
     width: 100%;
     height:90%;    
 `;
-//Teste
 
 export const Table = styled.table`
   width: 100%;

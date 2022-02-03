@@ -72,7 +72,7 @@ export const PainelFundo = styled.div`
 `;
 
 export const Tablelist = styled.div`
-    background-color: white; 
+    /* background-color: white;  */
     text-align: center;   
     height: 60%;
     width: 80%;
@@ -80,6 +80,9 @@ export const Tablelist = styled.div`
     color: black;    
     margin-top: 30px;
     padding-top: 30px;
+    canvas{
+        background-Color:white;
+    }
 `;
 
 export const ButtonNew = styled.div`

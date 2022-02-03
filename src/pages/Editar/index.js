@@ -21,10 +21,18 @@ function EditarUnidades() {
         async function getUnidade() {
           axios
             .get(`http://localhost:3333/unidades/${params.id}`)
-            .then((resp) => setUnidade(resp.data))
+            .then((resp) => {
+                setUnidade(resp.data)
+                setApelido(resp.data.apelido)
+                setLocal(resp.data.local)
+                setMarca(resp.data.marca)
+                setModelo(resp.data.modelo)     
+                setAtivo(resp.data.ativo)           
+            })
         }
         getUnidade();        
     }, []);     
+
        
     //Enviando as atualizações
     async function handleSubmit(unidade) {        
